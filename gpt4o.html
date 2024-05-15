@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase Landing Page</title>
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        header {
+            background: url('https://via.placeholder.com/1500') center no-repeat;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 4em;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin: 10px 0;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .features, .contact {
+            padding: 60px 20px;
+            background: #f4f4f4;
+        }
+
+        .features h2, .contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .feature-item {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            width: 200px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact form input, .contact form textarea {
+            width: calc(100% - 20px);
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1em;
+        }
+
+        .contact form button {
+            padding: 15px 30px;
+            border: none;
+            background: #333;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .contact form button:hover {
+            background: #555;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+
+            .feature-item {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<header id="home">
+    <h1>Welcome to My Awesome Page</h1>
+    <p>Showcasing my full capabilities</p>
+</header>
+
+<section class="features" id="features">
+    <h2>Features</h2>
+    <div class="feature-item">Feature 1</div>
+    <div class="feature-item">Feature 2</div>
+    <div class="feature-item">Feature 3</div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <input type="text" id="name" name="name" placeholder="Your Name">
+        <input type="email" id="email" name="email" placeholder="Your Email">
+        <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2023 My Awesome Page</p>
+</footer>
+
+<script>
+    document.querySelector('nav').addEventListener('click', (e) => {
+        if(e.target.tagName.toLowerCase() === 'a') {
+            e.preventDefault();
+            document.querySelector(e.target.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
+    document.querySelector('.contact form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Message sent!');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Landing Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h2 {
+            color: #333;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @keyframes fade {
+            from { opacity: 0.5 }
+            to { opacity: 1 }
+        }
+        .animate-fade { animation: fade 3s infinite alternate; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to My Awesome Landing Page</h1>
+        <p>Discover the limitless possibilities of integrated design and interaction!</p>
+    </div>
+    <div class="content">
+        <h2>Featuring Responsive Design and Dynamic Elements</h2>
+        <p>Resize your browser to see responsive adjustments!</p>
+        <button class="button animate-fade" onclick="toggleAnimation()">Animate Me!</button>
+    </div>
+    <div class="footer">
+        &copy; 2023 All Rights Reserved.
+    </div>
+
+    <script>
+        function toggleAnimation() {
+            var element = document.querySelector('.button');
+            if (element.style.animation) {
+                element.style.animation = '';
+            } else {
+                element.style.animation = 'fade 3s infinite alternate';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+이미지 생성용 프롬프트
+create a friendly anime style bear
+wearing a blue baseball cap
+also wearing striped sweater
+his name is geary
+
+draw an image of the same geary sitting in a desk
+
+draw an image of geary riding his bicycle
+
+
+
+
+코딩용 프롬프트
+
+use all your potentials
+you need to show all your abilities to be awesome
+create a landing page with cool features and animations
+the rule is you need to include everything in a single html file
+so if there are css or js, please include inside html
+the purpose of this landing page is to show off how much capable you are
